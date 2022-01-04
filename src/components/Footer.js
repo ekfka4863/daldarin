@@ -1,4 +1,4 @@
-// import "../styles/src/Footer.scss";
+import "../styles/src/Footer.scss";
 import { Link } from "react-router-dom";
 
 function Footer() {
