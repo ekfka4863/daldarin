@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "../styles/src/Main.scss";
 
+// images
 import main_view_box_bg_img from "../assets/img/main/main_view_box_bg_img.png";
 import main_con02_coupon from "../assets/img/main/main_con02_coupon.png";
 import main_con03_product_01 from "../assets/img/main/main_con03_product_01.jpeg";
@@ -186,7 +187,7 @@ function Main () {
             </div>
             <div className="promise_2">
               <h4>
-                리뷰가 가치를 <span className="orange_h4">증명</span>합니다.
+                리뷰가 가치를 <br /><span className="orange_h4">증명</span>합니다.
               </h4>
               <p>
                 각기 다른 취향과 기준을 가진 구매자들이 <br />
@@ -203,7 +204,7 @@ function Main () {
         <div className="main_con_5">
           <div className="main_con_5_title">
             <h3>
-              소중한 사람들과 함께
+              소중한 사람들과 함께 <br />
               다같이 <span className="orange_h3">달콤함</span>을 즐겨요!
             </h3>
             <p>
@@ -212,10 +213,10 @@ function Main () {
             </p>
           </div>
           <div className="main_con_5_order">
-            <div>
-              {/* <Link to="/"> */}
-                단체주문하기
-              {/* </Link> */}
+            <div> 
+                {/* <Link to=""> */}
+                  단체주문하기  
+                {/* </Link> */}
             </div>
             <img src={main_con05_img} alt="달다린 귤 이미지" />
           </div>
