@@ -15,7 +15,7 @@ function Header() {
             <Link to="/login" >로그인<span className="blind">페이지로 이동하려면 클릭하세요</span></Link>
           </li>
           <li>
-            <Link to="/sign" >회원가입<span className="blind">페이지로 이동하려면 클릭하세요</span></Link>
+            <Link to="/sign-up" >회원가입<span className="blind">페이지로 이동하려면 클릭하세요</span></Link>
           </li>
         </ul>
       </div>
@@ -72,16 +72,6 @@ function Header() {
           {/* reference:  https://it-hhhj2.tistory.com/38 */}
           {/* </button> */}
         </div>
-        {/* <div className="modal">
-          <ul>
-            <li>
-              <Link to="/login" >로그인<span className="blind">페이지로 이동하려면 클릭하세요</span></Link>
-            </li>
-            <li>
-              <Link to="/sign" >회원가입<span className="blind">페이지로 이동하려면 클릭하세요</span></Link>
-            </li>
-          </ul>
-        </div> */}
       </div>
     </header>
   );

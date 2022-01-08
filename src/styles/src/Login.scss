@@ -43,6 +43,9 @@
           border-bottom: 2px solid #a9a9a9;
           // background-color: #fff;
         }
+        li:hover {
+          cursor: pointer;
+        }
         li.on {
           color: #fea30b;
           border-bottom: 2px solid #fea30b;
@@ -52,6 +55,7 @@
     .login_form {
       // 회원 로그인 
       .member_login {
+        // display: none;
         form {
           .login_parts {
             .login_input_part {
@@ -162,7 +166,7 @@
                 text-align: center;
                 line-height: 80px;
                 font-size: 20px;
-                font-weight: bold;
+                font-weight: 500;
                 color: #fea30b;
               }
             }// .login_btn_part
@@ -174,19 +178,65 @@
 
       // 비회원 로그인 
       .nonmember_login {
-        display: none;
+        // display: none;
         .login_input_part {
-          input:nth-child(1) {}
-          input:nth-child(2) {}
+          margin-bottom: 15px;
+          input {
+            display: block;
+            width: 100%;
+            height: 78px;
+            padding-left: 40px;
+            margin-bottom: 10px;
+            border: none;
+            box-sizing: border-box;
+            border-radius: 10px;
+            font-size: 16px;
+            color: #aaa;
+          }
+          input:focus {
+            background-color: #e8f0fe;
+            outline: none;
+          }
         }// .login_input_part
         .login_check_part {
-          p {}
+          margin-bottom: 50px;
+          p {
+            text-align: center;
+            font-size: 13px;
+            color: #757575;
+          }
         }// .login_check_part
         .login_btn_part {
-          button {}
+          button {
+            display: block;
+            width: 100%;
+            height: 80px;
+            margin-bottom: 10px;
+            background-color: #fea30b;
+            border-radius: 10px;
+            box-sizing: border-box;
+            text-align: center;
+            line-height: 80px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+          }
           a {
-            span:nth-child(1) {}
-            span:nth-child(2) {}
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 60px;
+            padding: 0 40px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            background-color: #fff;
+            border-radius: 10px;
+            line-height: 60px;
+            font-size: 14px;
+            color: #757575;
+            span:nth-child(2) {
+              font-weight: 600;
+            }
           }
         }// .login_btn_part
       }// .nonmember_login
@@ -297,23 +347,21 @@
         div.on {}
   
   
-        // 비회원 로그인 
-        .nonmember_login {
-          .login_input_part {
-            input:nth-child(1) {}
-            input:nth-child(2) {}
-          }// .login_input_part
-          .login_check_part {
-            p {}
-          }// .login_check_part
-          .login_btn_part {
-            button {}
-            a {
-              span:nth-child(1) {}
-              span:nth-child(2) {}
-            }
-          }// .login_btn_part
-        }// div
+      // 비회원 로그인 
+      .nonmember_login {
+        // display: none;
+        .login_input_part {
+        }// .login_input_part
+        .login_check_part {
+          // p {}
+        }// .login_check_part
+        .login_btn_part {
+          // button {}
+          a {
+            padding: 0 30px;
+          }
+        }// .login_btn_part
+      }// .nonmember_login
         .sns_login {
           h3 {}
           .sns_login_con {
@@ -358,6 +406,7 @@
       .login_form {
         // 회원 로그인 
         .member_login {
+          // display: none;
           form {
             .login_parts {
               .login_input_part {
