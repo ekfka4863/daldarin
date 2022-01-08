@@ -1,8 +1,32 @@
 import "../styles/src/Header.scss";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 
 function Header() {
+  const [modal, setModal] = useState(false);
+
+  // Component - modal 
+  function Modal () {
+    return (
+      <div className="modal">
+        <ul>
+          <li>
+            <Link to="/login" >로그인<span className="blind">페이지로 이동하려면 클릭하세요</span></Link>
+          </li>
+          <li>
+            <Link to="/sign" >회원가입<span className="blind">페이지로 이동하려면 클릭하세요</span></Link>
+          </li>
+        </ul>
+      </div>
+    )
+  }
+
+  // function 
+  const onClickModal = () => {
+    setModal(!modal);
+  };
+
   return (
     <header id="headBox">
       <Link to="/">
@@ -39,13 +63,8 @@ function Header() {
           </ul>
         </nav>
         <div className="unb">
-          {/* 각각의 button 태그에 Link component 삽입할 것 */}
-          <button>
-            {/* 클릭시 아래 .modal 컴포넌트로 따로 빼든지 해서 불러오기 */}
-          </button>
-          {/* <button> */}
-          {/* <button onClick={() => { window.location.href = "/cart" }}> */}
-          {/* <button onClick={() => { window.location.replace("/cart") }}> */}
+          <button onClick={onClickModal}></button>
+          {(modal) ? <Modal /> : null}
           <Link to="/cart" >
             <span className="blind">장바구니</span>
             <button></button>
@@ -53,16 +72,16 @@ function Header() {
           {/* reference:  https://it-hhhj2.tistory.com/38 */}
           {/* </button> */}
         </div>
-      {/* <div className="modal">
-        <ul>
-          <li>
-            <Link to="/login" ><span className="blind">로그인</span></Link>
-          </li>
-          <li>
-            <Link to="/sign" ><span className="blind">회원가입</span></Link>
-          </li>
-        </ul>
-      </div> */}
+        {/* <div className="modal">
+          <ul>
+            <li>
+              <Link to="/login" >로그인<span className="blind">페이지로 이동하려면 클릭하세요</span></Link>
+            </li>
+            <li>
+              <Link to="/sign" >회원가입<span className="blind">페이지로 이동하려면 클릭하세요</span></Link>
+            </li>
+          </ul>
+        </div> */}
       </div>
     </header>
   );

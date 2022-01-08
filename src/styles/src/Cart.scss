@@ -1,0 +1,11 @@
+@import "../common/mixin";
+
+/* # - pc, desktop1, desktop2 */ 
+
+
+/* # - mobile */ 
+@include mobile {}
+
+
+/* # - tablet */ 
+@include tablet {}

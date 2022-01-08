@@ -1,3 +1,5 @@
+import "../styles/src/Cart.scss";
+
 function Cart() {
   return (
     <>

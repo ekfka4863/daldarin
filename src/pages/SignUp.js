@@ -1,3 +1,5 @@
+import "../styles/src/SignUp.scss";
+
 function SignUp() {
   return (
     <>
