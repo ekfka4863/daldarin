@@ -1,7 +1,14 @@
 import "../styles/src/Login.scss";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 function Login() {
+  const [saveId, setSaveId] = useState(false);
+
+  const onClickSaveId = () => {
+    setSaveId(!saveId);
+  };
+
   return (
     <>
       <div id="loginBox">
@@ -32,21 +39,17 @@ function Login() {
                   <div className="login_check_part">
                     <div>
                       <input type="checkbox" id="loginSaveId" />
-                      <label htmlFor="loginSaveId">
-                        <span></span>
+                      <label htmlFor="loginSaveId" onClick={onClickSaveId}>
+                        <span className={(saveId === true) ? "on" : ""}></span>
                         <span>아이디 저장</span>
                       </label>
                     </div>
                     <ul>
                       <li>
-                        {/* <a href="#"> */}
-                          아이디 찾기
-                        {/* </a> */}
+                        <Link to="/find-id">아이디 찾기</Link>
                       </li>
                       <li>
-                        {/* <a href="#"> */}
-                          비밀번호 찾기
-                        {/* </a> */}
+                        <Link to="/find-pw">비밀번호 찾기</Link>
                       </li>
                     </ul>
                   </div>

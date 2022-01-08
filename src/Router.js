@@ -15,6 +15,8 @@ import ShippingAndOrder from './pages/ShippingAndOrder';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Cart from './pages/Cart';
+import FindId from './pages/FindId';
+import FindPw from './pages/FindPw';
 
 
 const Router = () => (
@@ -31,6 +33,8 @@ const Router = () => (
       <Route path="/login" element={<Login />} />
       <Route path="/sign-up" element={<SignUp />} />
       <Route path="/cart" element={<Cart />} />
+      <Route path="/find-id" element={<FindId />} />
+      <Route path="/find-pw" element={<FindPw />} />
       {/* https://yoonjong-park.tistory.com/entry/Build-%EC%9D%B4%ED%9B%84-%ED%9D%B0-%ED%99%94%EB%A9%B4%EB%A7%8C-%EB%82%98%EC%98%A4%EB%8A%94-%EC%9D%B4%EC%9C%A0 */}
     </Routes>
     <Footer />
