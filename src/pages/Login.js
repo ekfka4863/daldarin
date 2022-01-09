@@ -1,6 +1,12 @@
 import "../styles/src/Login.scss";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+// Cross Origin 허용하는 방법 ->  https://doqtqu.tistory.com/232
+// 카카오 로그인 다른 방법 ->  https://m.blog.naver.com/rkdudwl/221906303255
+// import KaKaoLogin from 'react-kakao-login';
+
+
 
 function Login() {
   const [saveId, setSaveId] = useState(false);
@@ -65,6 +71,7 @@ function Login() {
   }
 
 
+
   // function 
   const onClickSaveId = () => {
     setSaveId(!saveId);
@@ -76,6 +83,9 @@ function Login() {
     setMemberLogin(false);
   };
   
+  // kakao login API 
+  // https://www.youtube.com/watch?v=Re2R2rid1K4
+  // https://velog.io/@dulcis-hortus/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%86%A1-%EA%B3%B5%EC%9C%A0-%EA%B8%B0%EB%8A%A5-%EB%A7%8C%EB%93%A4%EA%B8%B0
 
   return (
     <>
@@ -102,14 +112,13 @@ function Login() {
             {/* sns 간편 로그인 */}
             <div className="sns_login">
               <h3>SNS 간편 로그인</h3>
+              {/* 여기서 팝업창 띄우는거는 좀 더 찾아보기! */}
               <div className="sns_login_con">
-                {/* 여기서 팝업창 띄우는거는 좀 더 찾아보기! */}
                 <button onClick={() => window.open("카카오 로그인 API 파일?!", "kakaotalk_popup_window", "top")}>
-                  {/* <img src="../assets/img/login/kakao_login.png" alt="카카오톡" /> */}
                   <span></span>
                   <span>카카오</span>
                 </button>
-                {/* 여기서 팝업창 띄우는거는 좀 더 찾아보기! */}
+
                 <button onClick={() => window.open("네이버 로그인 API 파일?!", "naver_popup_window", "top")}>
                   {/* <img src="../assets/img/login/naver_login.png" alt="네이버" /> */}
                   <span className="login_api_img"></span>
@@ -119,9 +128,12 @@ function Login() {
             </div>
           </div>
         </div>
+
+
       </div>
     </>
   )
 }
 
 export default Login;
+
