@@ -1,5 +1,10 @@
 import "../styles/src/Benefit.scss";
 
+// img 
+import DaldarinPointsImg1 from "../assets/img/benefit/benefit_point_icon01.png";
+import DaldarinPointsImg2 from "../assets/img/benefit/benefit_point_icon02.png";
+import DaldarinPointsImg3 from "../assets/img/benefit/benefit_point_icon03.png";
+
 
 function Benefit() {
   return (
@@ -60,32 +65,41 @@ function Benefit() {
                 </tr>
                 <tr className="table_row_4">
                   <th>적립금</th>
-                  <td colspan="4" className="daldarin_points">
-                    <dl>
-                      <dt>{/* 이미지 삽입 */}</dt>
-                      <dd>
-                        <span>텍스트 리뷰 작성 시</span>
-                        <span>200</span>
-                        <span>포인트 적립</span>
-                      </dd>
-                    </dl>
-                    <dl>
-                      <dt>{/* 이미지 삽입 */}</dt>
-                      <dd>
-                        <span>포토 리뷰 작성</span>
-                        <span>250</span>
-                        <span>포인트 적립</span>
-                      </dd>
-                    </dl>
-                    <dl>
-                      <dt>{/* 이미지 삽입 */}</dt>
-                      <dd>
-                        <span>등급별 결제금액의</span>
-                        <span>n%</span>
-                        <span>포인트 적립</span>
-                      </dd>
-                    </dl>
+                  <td colSpan={4} className="daldarin_points">
+                    <div>
+                      <div className="daldarin_points_img_1">
+                        <img src={DaldarinPointsImg1} alt="달다린 등급별 혜택 이미지 1" />
+                      </div>
+                      <div>
+                        <b>텍스트 리뷰 작성 시</b><br />
+                        <span className="emphasized_points">200</span>
+                        포인트 적립
+                      </div>
+                    </div>
+                    <div>
+                      <div className="daldarin_points_img_2">
+                        <img src={DaldarinPointsImg2} alt="달다린 등급별 혜택 이미지 2" />
+                      </div>
+                      <div>
+                        <b>포토 리뷰 작성 시</b><br />
+                        <span className="emphasized_points">250</span>
+                        포인트 적립
+                      </div>
+                    </div>
+                    <div>
+                      <div className="daldarin_points_img_3">
+                        <img src={DaldarinPointsImg3} alt="달다린 등급별 혜택 이미지 3" />
+                      </div>
+                      <div>
+                        <b>등급별 결제금액의</b><br />
+                        <span className="emphasized_points">n%</span>
+                        포인트 적립
+                      </div>
+                    </div>
                   </td>
+                  {/* <td className="daldarin_points"></td>
+                  <td className="daldarin_points"></td>
+                  <td className="daldarin_points"></td> */}
                 </tr>
               </tbody>
             </table>
