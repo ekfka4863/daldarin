@@ -1,0 +1,216 @@
+@import "../common/mixin";
+
+/* #benefitBox - pc, desktop1, desktop2 */ 
+#benefitBox {
+  padding: 100px 40px;
+  .benefit_box_con {
+    h3 {
+      padding-bottom: 10px ;
+      font-size: 30px;
+      font-weight: 500;
+      color: #212121;
+    }
+    .benefit_box_table {
+      table {
+        border: none;
+        // border-spacing: 0;
+        // border-collapse: collapse;
+        color: #212121;
+        text-align: center;
+        border-top: 2px solid #000;
+        tbody {
+          border: none;
+          tr {
+            border: none;
+            display: table-row;
+            height: 140px;
+            border-bottom: 1px solid #dadce0;
+            th {
+              border: none;
+              width: auto;
+              min-width: 140px;
+              font-weight: 500;
+            }
+            td {
+              border: none;
+              width: calc(100% / 4);
+            }
+          }
+          .table_row_1 {
+            // th {}
+            td {
+              div {
+                display: flex;
+                flex-direction: column;
+                span:nth-child(1) {
+                  font-size: 30px;
+                  font-weight: 800;
+                }
+                span:nth-child(2) {
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+          .table_row_2 {
+            th {}
+            td {
+              font-size: 15px;
+              font-weight: 400;
+            }
+          }
+          .table_row_3 {
+            th {}
+            td {
+              font-size: 15px;
+              font-weight: 400;
+
+            }
+          }
+          .table_row_4 {
+            // width: auto;
+            // min-width: 1000px;
+            // height: 100%;
+            background-color: #90a;
+            th {}
+            .daldarin_points {
+              display: flex;
+              // font-size: 15px;
+              // font-weight: 400;
+
+              dl {
+                display: flex;
+                padding: 15px 50px;
+                background-color: #181;
+                dt {
+                  width: 100px;
+                  height: 100px;
+                  background-color: #ea1;
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  background-size: contain;
+                }
+                dd {
+                  span:nth-child(1) {
+                    display: block;
+                    font-size: 15px;
+                    font-weight: 600;
+                  }
+                  span:nth-child(2) {
+                    font-size: 15px;
+                    font-weight: 600;
+                  }
+                  span:nth-child(3) {}
+                }
+              }// dl
+              dl:nth-child(1) {
+                dt {
+                  background-image: url("../../assets/img/benefit/benefit_point_icon01.png");
+                }
+              }
+              dl:nth-child(2) {
+                dt {
+                  background-image: url("../../assets/img/benefit/benefit_point_icon02.png");
+                }
+              }
+              dl:nth-child(3) {
+                dt {
+                  background-image: url("../../assets/img/benefit/benefit_point_icon03.png");
+                }
+              }
+            }// .daldarin_points
+          }
+        }
+      }// table
+    }// .benefit_box_table
+  }// .benefit_box_con
+}
+
+/* #benefitBox - mobile */ 
+@include mobile {
+  #benefitBox {
+    .benefit_box_con {
+      h3 {}
+      .benefit_box_table {
+        table {
+          // caption {}
+          tbody {
+            .table_row_1 {
+              th {}
+              td {}
+            }
+            .table_row_2 {
+              th {}
+              td {}
+            }
+            .table_row_3 {
+              th {}
+              td {}
+            }
+            .table_row_4 {
+              th {}
+              .daldarin_points {
+                dl {
+                  dt {}
+                  dd {
+                    span:nth-child(1) {}
+                    span:nth-child(2) {}
+                    span:nth-child(3) {}
+                  }
+                }// dl
+                // dl:nth-child(1) {}
+                // dl:nth-child(2) {}
+                // dl:nth-child(3) {}
+              }// .daldarin_points
+            }
+          }
+        }// table
+      }// .benefit_box_table
+    }// .benefit_box_con
+  }
+}
+
+
+/* #benefitBox - tablet */ 
+@include tablet {
+  #benefitBox {
+    .benefit_box_con {
+      h3 {}
+      .benefit_box_table {
+        table {
+          // caption {}
+          tbody {
+            .table_row_1 {
+              th {}
+              td {}
+            }
+            .table_row_2 {
+              th {}
+              td {}
+            }
+            .table_row_3 {
+              th {}
+              td {}
+            }
+            .table_row_4 {
+              th {}
+              .daldarin_points {
+                dl {
+                  dt {}
+                  dd {
+                    span:nth-child(1) {}
+                    span:nth-child(2) {}
+                    span:nth-child(3) {}
+                  }
+                }// dl
+                // dl:nth-child(1) {}
+                // dl:nth-child(2) {}
+                // dl:nth-child(3) {}
+              }// .daldarin_points
+            }
+          }
+        }// table
+      }// .benefit_box_table
+    }// .benefit_box_con
+  }
+}

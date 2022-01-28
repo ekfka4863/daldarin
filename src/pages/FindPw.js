@@ -1,3 +1,8 @@
+// import { Link } from "react-router-dom";
+
+// import "../styles/src/Shopping.scss";
+
+
 function FindPw () {
   return (
     <div>비밀번호 찾기 페이지!!</div>

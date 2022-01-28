@@ -25,10 +25,23 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+
+    <!-- naver login API -->
+    <script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js"
+    charset="utf-8"></script>
+    <!-- https://velog.io/@he0_077/react-naver-sns-login-%EB%84%A4%EC%95%84%EB%A1%9C-%EC%97%B0%EB%8F%99 -->
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- 
+      다시 로그인 구현할 때, 
+      여기 확인해 볼 것! 
+    -->
+    <!-- <a href="javascript:kakaoLogin();">
+      <img src="../src/assets/img/login/kakao_login.png" alt="카카오 로그인" width="100px" height="50px" />
+    </a> -->
     <div id="root"></div>
+
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -43,11 +56,69 @@
     <!-- kakao login API -->
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
     <script>
-      // require("dotenv").config();
-      Kakao.init("7ebdf84692445e3275f88c19ad1d4228");
-      // if (KAKAO_LOGIN_JAVASCRIPT_KEY !== null || KAKAO_LOGIN_JAVASCRIPT_KEY !== '') {
-      //   console.log("dotenv 에서 키값 잘 가져옴!!");
+      window.Kakao.init("7ebdf84692445e3275f88c19ad1d4228");
+
+      console.log(Kakao.isInitialized());   // true
+
+      function kakaoLogin() {
+        window.Kakao.Auth.login({
+          scope: "profile_nickname, account_email, birthday",
+          success: function (authObj) {
+            console.log(authObj);
+            window.Kakao.API.request({
+              url: "/v2/user/me",
+              success: res => {
+                const kakao_account = res.kakao_account;
+                console.log(kakao_account);
+              }
+            });
+          }
+        });
+      }
+
+      // function loginWithKakao() {
+      //   Kakao.Auth.login({
+      //     success: function(authObj) {
+      //       alert(JSON.stringify(authObj))
+      //     },
+      //     fail: function(err) {
+      //       alert(JSON.stringify(err))
+      //     },
+      //   })
       // }
+
+      // https://riverblue.tistory.com/18
+      // https://www.youtube.com/watch?v=Re2R2rid1K4
+      // https://tyrannocoding.tistory.com/49
+      // https://velog.io/@kados22/react-kakao-login-%EC%B9%B4%EC%B9%B4%EC%98%A4-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EA%B5%AC%ED%98%84
+
+
+      // ===========
+      // // const CLIENT_ID = "689820";
+      // // const REDIRECT_URI =  "http://localhost:3000/daldarin/login";
+      // // const KAKAO_AUTH_URL = `https://kauth.kakao.com/oauth/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=code`;
+      // // const KAKAO_AUTH_URL = `https://kauth.kakao.com/oauth/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=code`;
+      
+      
+
+      // var xhttp = new XMLHttpRequest();
+      // xhttp.onreadystatechange = function () {
+      //   if (this.readyState == 4 && this.status == 200) {
+      //     console.log(xhttp.responseText);
+      //   } else {
+      //     console.log("error occured!!");
+      //   }
+      // };
+      // // xhttp.open("GET", "https://cors-anywhere.herokuapp.com/http://localhost:3000");
+      // xhttp.open("GET", "https://localhost:3000/daldarin/login?code=ffae5e7b2dba988c1853e27e9a7b511f");
+      // xhttp.send();
+      // // https://cors-anywhere.herokuapp.com/
+      // // http://localhost:3000/daldarin/login?code=ffae5e7b2dba988c1853e27e9a7b511f
+      // ===========
+
+      fetch("http://localhost:3000/daldarin/login?code=ffae5e7b2dba988c1853e27e9a7b511f")
+      .then(res => res.json())
+      .then(data => console.log(data);)
     </script>
 
   </body>

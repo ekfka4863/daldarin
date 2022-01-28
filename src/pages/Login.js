@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 // 카카오 로그인 다른 방법 ->  https://m.blog.naver.com/rkdudwl/221906303255
 // import KaKaoLogin from 'react-kakao-login';
 
+import {Helmet} from "react-helmet";
+
 
 
 function Login() {
@@ -131,6 +133,12 @@ function Login() {
 
 
       </div>
+
+
+      {/* kakao login API */}
+
+      
+        
     </>
   )
 }
