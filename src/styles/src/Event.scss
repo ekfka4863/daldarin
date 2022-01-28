@@ -1,0 +1,11 @@
+@import "../common/mixin";
+
+/* #eventBox - pc, desktop1, desktop2 */ 
+
+
+/* #eventBox - mobile */ 
+@include mobile {}
+
+
+/* #eventBox - tablet */ 
+@include tablet {}
