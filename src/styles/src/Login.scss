@@ -37,19 +37,22 @@
         line-height: 70px;
         // background-color: #e1a;
         li {
-          width: 220px;
+          // width: 220px;
+          width: 100%;
           font-size: 20px;
           font-weight: 600;
-          border-bottom: 2px solid #a9a9a9;
+          color: #fea30b;
+          border-bottom: 2px solid #fea30b;
+          // border-bottom: 2px solid #a9a9a9;
           // background-color: #fff;
         }
         li:hover {
           cursor: pointer;
         }
-        li.on {
-          color: #fea30b;
-          border-bottom: 2px solid #fea30b;
-        }
+        // li.on {
+        //   color: #fea30b;
+        //   border-bottom: 2px solid #fea30b;
+        // }
       }
     }
     .login_form {
@@ -304,7 +307,8 @@
           min-width: calc(360px - 10px - 10px - 60px);
           // background-color: #992;
           li {
-            width: 190px;
+            // width: 190px;
+            width: 100%;
             min-width: 145px;
           }
           // li.on {}
@@ -396,9 +400,7 @@
           justify-content: initial;
           // background-color: #33a;
           li {
-            width: auto;
-            min-width: 220px;
-            max-width: calc(768px / 2);
+            width: 100%;
           }
           // li.on {}
         }
