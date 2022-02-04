@@ -192,31 +192,112 @@
       padding-top: 50px;
       h3 {
         font-size: 20px;
-        margin-bottom: 25px;
+        margin: 10px 0;
       }
       .marketing_agreement {
-        p {}
+        position: relative;
+        font-size: 13px;
+        p {
+          margin-bottom: 30px;
+          font-weight: 400;
+          color: #7b7b7b;
+        }
         div {
-          span {}
+          span {
+            color: #191919;
+            text-decoration: underline;
+          }
         }
         .agreement_options {
-          div {
-            input {}
-            label {}
+          display: flex;
+          margin-top: 20px;
+          // background-color: #da1;
+          div:nth-child(1) {
+            position: relative;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 80px;
+            height: 30px;
+            border-radius: 20px;
+            background-color: #a9b4ba;
+            label {
+              position: absolute;
+              top: 4px;
+              left: 4px;
+              width: 22px;
+              height: 22px;
+              border-radius: 100px;
+              background-color: #fff;
+              input {
+                width: 0;
+                height: 0;
+              }
+            }
           }
-          // div:nth-child(1) {}
-          // div:nth-child(2) {}
-          // div:nth-child(3) {}
-          // div:nth-child(4) {}
+          div:nth-child(2),
+          div:nth-child(3),
+          div:nth-child(4) {
+            display: flex;
+            height: 20px;
+            margin-right: 25px;
+            // background-color: #ea1;
+            label {
+              font-size: 14px;
+              color: #757575;
+              // background-color: #d0a;
+              input[type="checkbox"] {
+                display: none;
+              }// input[type="checkbox"]
+              input[type="checkbox"] + span {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                margin: 0;
+                margin-right: 8px;
+                vertical-align: top;
+                background-image: url("../../assets/img/sign_up/input_check_off.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                // background-color: #fdf;
+              }// span
+            }// label
+          }
+          div:nth-child(4) {
+            margin-right: 0;
+          }
         }
       }
     }
-    .sign_up_box_submit {
-      display: none;
 
-      button {}
-      p {}
-    }
+    .sign_up_box_submit {
+      // display: none;
+      margin-top: 50px;
+      padding-bottom: 60px;
+      border-bottom: 1px solid #dadce0;
+
+      button {
+        width: 100%;
+        height: 70px;
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #fff;
+        border-radius: 10px;
+        background-color: #a9b4ba;
+      }
+      p {
+        font-size: 13px;
+        font-weight: 400;
+        text-align: center;
+        color: #191919;
+        span {
+          text-decoration: underline;
+        }
+      }
+    }// .sign_up_box_submit
+
   }// .sign_up_box_con
 
 }// #signUpBox
@@ -226,18 +307,24 @@
 /* #signUpBox - mobile */ 
 @include mobile {
   #signUpBox {
+    margin: 30px 10px;
     .sign_up_box_title {
       h2 {}
       p {}
     }
     .sign_up_box_con {
+      width: 330px;
       .sign_up_box_detail_1 {
         h3 {}
         .sign_up_form {
           .required_data_part_1 {
             div {
-              dt {}
+              dt {
+                width: 35%;
+                text-indent: 10px;
+              }
               dd {
+                width: 65%;
                 input {}
               }
             }// div
@@ -247,15 +334,33 @@
           }
           .required_data_part_2 {
             div {
-              dt {}
+              dt {
+                width: 35%;
+                text-indent: 10px;
+              }
               dd {
+                width: 65%;
                 input {}
               }
             }
-            // div:nth-child(1) {}
-            // div:nth-child(2) {}
-            // div:nth-child(3) {}
-            // div:nth-child(4) {}
+            .phone_verification_part {
+              .phone_num_check, 
+              .phone_verification {
+                dd {
+                  button {
+                    width: 80px;
+                    font-size: 13px;
+                  }
+                }
+              }
+            }// .phone_verification_part 
+
+            .gender_check_part {
+              // dt {}
+              dd.gender_options {
+                padding: 0 10px;
+              }
+            }// .gender_check_part
           }
         }
       }
@@ -267,11 +372,12 @@
             span {}
           }
           .agreement_options {
-            div {
-              input {}
-              label {}
+            div:nth-child(1) {
+              margin-right: 10px;
+              label {
+                input {}
+              }
             }
-            // div:nth-child(1) {}
             // div:nth-child(2) {}
             // div:nth-child(3) {}
             // div:nth-child(4) {}
@@ -295,7 +401,6 @@
       p {}
     }
     .sign_up_box_con {
-      width: 330px;
       .sign_up_box_detail_1 {
         h3 {}
         .sign_up_form {

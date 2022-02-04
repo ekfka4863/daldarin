@@ -1,0 +1,16 @@
+@import "../common/mixin";
+
+
+// 이거 하나 scss 파일로 모든 Product1, Product2, ... 들에 공통 적용! 
+
+
+
+/* # - pc, desktop1, desktop2 */ 
+
+
+/* # - mobile */ 
+@include mobile {}
+
+
+/* # - tablet */ 
+@include tablet {}

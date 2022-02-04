@@ -44,10 +44,8 @@ function Event() {
         </h2>
         <section>
           <div className="event_box_title">
-            <h3>
-              <span>믿을 수 있는 달달함</span>
-              <span>daldarin event</span>
-            </h3>
+            <h3>daldarin event</h3>
+            <p>믿을 수 있는 달달함</p>
           </div>
           <div className="event_box_con">
             <ul>

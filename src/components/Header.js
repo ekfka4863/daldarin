@@ -5,20 +5,32 @@ import { useState } from "react";
 
 function Header() {
   const [modal, setModal] = useState(false);
+  // console.log(modal);
+
+
+  const onClickModalClose = () => {
+    const modalBg = document.querySelector('.modal_bg');
+
+    onClickModal();
+  };
+
 
   // Component - modal 
   function Modal () {
     return (
-      <div className="modal">
-        <ul>
-          <li>
-            <Link to="/login" >로그인<span className="blind">페이지로 이동하려면 클릭하세요</span></Link>
-          </li>
-          <li>
-            <Link to="/sign-up" >회원가입<span className="blind">페이지로 이동하려면 클릭하세요</span></Link>
-          </li>
-        </ul>
-      </div>
+      <>
+        <div className="modal" onClick={onClickModalClose}>
+          <ul>
+            <li>
+              <Link to="/login" >로그인<span className="blind">페이지로 이동하려면 클릭하세요</span></Link>
+            </li>
+            <li>
+              <Link to="/sign-up" >회원가입<span className="blind">페이지로 이동하려면 클릭하세요</span></Link>
+            </li>
+          </ul>
+        </div>
+        <div className="modal_bg" onClick={onClickModalClose}></div>
+      </>
     )
   }
 
@@ -26,6 +38,10 @@ function Header() {
   const onClickModal = () => {
     setModal(!modal);
   };
+
+
+
+
 
   return (
     <header id="headBox">
