@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 // mockdata/API
 import products from "../data/products.json";
 
@@ -59,14 +61,16 @@ function Shopping() {
           </div>
 
           <div className="event_info">
-            <div>
-              <h3>
-                이번 달 구매 아직 안하셨죠? <br />
-                첫 구매는 할인 쿠폰으로!
-              </h3>
-              <p>얼리버드 혜택</p>
-            </div>
-            <div>{/* coupon img */}</div>
+            <Link to="event">
+              <div>
+                <h3>
+                  이번 달 구매 아직 안하셨죠? <br />
+                  첫 구매는 할인 쿠폰으로!
+                </h3>
+                <p>얼리버드 혜택</p>
+              </div>
+              <div>{/* coupon img */}</div>
+            </Link>
           </div>
         </div>
       </div>

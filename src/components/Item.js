@@ -9,7 +9,7 @@ function Item ({ id ,title, detail, original_price, discount_rate, quantity, ima
   return (
     <>
       <div id="eachItem">
-        <Link to={"product-" + `${id}`}>
+        <Link to={"product/" + `${id}`}>
           <div className="item_inner">
             <div className="item_visual">
               <dl>

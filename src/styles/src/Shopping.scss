@@ -27,6 +27,7 @@
     .shopping_box_con {
       padding: 10px 0;
       margin-top: 50px;
+      padding-bottom: 150px;
       .product_filter_conditions {
         display: flex;
         justify-content: space-between;
@@ -83,33 +84,41 @@
     }// .shopping_box_con
 
     .event_info {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       padding: 25px 100px;
       margin-bottom: 30px;
+      border-radius: 20px;
       background-image: url("../../assets/img/shopping/event_list_bg.jpg");
-      div:nth-child(1) {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      a {
         display: flex;
-        flex-direction: column;
-        h3 {
-          font-size: 30px;
-          font-weight: 500;
-          color: #212121;
+        justify-content: space-between;
+        align-items: center;
+
+
+        div:nth-child(1) {
+          display: flex;
+          flex-direction: column;
+          h3 {
+            font-size: 30px;
+            font-weight: 500;
+            color: #212121;
+          }
+          p {
+            order: -1;
+            color: #fea30b;
+          }
         }
-        p {
-          order: -1;
-          color: #fea30b;
+        div:nth-child(2) {
+          width: 400px;
+          height: 200px;
+          background-image: url("../../assets/img/shopping/coupon_img01.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
         }
-      }
-      div:nth-child(2) {
-        width: 400px;
-        height: 200px;
-        background-image: url("../../assets/img/shopping/coupon_img01.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-      }
+      }// a
     }// .event_info
     
   }// .shopping_box_inner
@@ -156,9 +165,7 @@
         }// .product_filter_conditions
         .product_list {
           width: 340px;
-          // align-content: center;
           align-items: center;
-          // align-self: center;
           flex-direction: column;
 
           // <Item />
@@ -166,19 +173,29 @@
       }// .shopping_box_con
   
       .event_info {
-        display: flex;
-        flex-direction: column;
-        padding: 30px 10px;
-        div:nth-child(1) {
-          margin-bottom: 30px;
-          h3 {
-            font-size: 25px;
+        padding: 25px;
+
+        a {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+  
+          width: 100%;
+          height: 100%;
+          border-radius: 20px;
+
+          div:nth-child(1) {
+            margin-bottom: 30px;
+            h3 {
+              font-size: 25px;
+            }
+            // p {}
           }
-          // p {}
-        }
-        div:nth-child(2) {
-          width: 300px;
-        }
+          div:nth-child(2) {
+            width: 300px;
+          }
+        }// a
       }// .event_info
       
     }// .shopping_box_inner
@@ -216,7 +233,18 @@
       }// .shopping_box_con
   
       .event_info {
-        div {}
+        padding: 25px 30px;
+        a {          
+          div:nth-child(1) {
+            h3 {
+              font-size: 25px;
+            }
+            // p {}
+          }
+          div:nth-child(2) {
+            width: 350px;
+          }
+        }// a
       }// .event_info
       
     }// .shopping_box_inner
