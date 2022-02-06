@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router';
+
+
 // styling 
 import "../styles/src/Header.scss";
 
@@ -10,24 +14,30 @@ import "../styles/src/Header.scss";
 
 function Header() {
   const [loggedIn, setLoggedIn] = useState(true);
+  // const [loggedIn, setLoggedIn] = useState(false);
   const [sideBar, setSideBar] = useState(false);
   const [modal, setModal] = useState(false);
   // console.log(modal);
-
-
+  
+  
+  
   const onClickModalClose = () => {
     const modalBg = document.querySelector('.modal_bg');
-
+    
     onClickModal();
   };
-
+  
   // 로그아웃 - 임의로 지정한 함수!?
-  const onClickLogout = () => {
+  const navigate = useNavigate(); 
+
+  const onClickLogOut = () => {
     alert("정상적으로 로그아웃 되었습니다.");
     setLoggedIn(!loggedIn);
+
+    // 로그아웃 버튼 눌렀을 때, 정상적으로 로그아웃 후 메인페이지로 이동시키기
+    navigate('/');
   };
-  
-    
+
 
   // Component - modal 
   function Modal () {
@@ -43,7 +53,7 @@ function Header() {
                     <Link to="/my-page" >마이페이지<span className="blind">페이지로 이동하려면 클릭하세요</span></Link>
                   </li>
                   <li>
-                    <button className="logout_btn" onClick={onClickLogout}>로그아웃</button>
+                    <button className="logout_btn" onClick={onClickLogOut}>로그아웃</button>
                   </li>
                 </>
               :
@@ -83,7 +93,7 @@ function Header() {
                       <Link to="/my-page" >마이페이지<span className="blind">페이지로 이동하려면 클릭하세요</span></Link>
                     </li>
                     <li>
-                      <button className="logout_btn" onClick={onClickLogout}>로그아웃</button>
+                      <button className="logout_btn" onClick={onClickLogOut}>로그아웃</button>
                     </li>
                   </ul>
                 </>

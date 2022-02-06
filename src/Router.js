@@ -1,6 +1,7 @@
 // import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';   // https://velog.io/@soryeongk/ReactRouterDomV6
 
+
 // 공통 컴포넌트 임포트 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -69,6 +70,8 @@ const Router = () => (
     <Footer />
   </BrowserRouter>
 );
+
+
 
 
 // https://velog.io/@ki_blank/React-Router-1.-8njzuummrs

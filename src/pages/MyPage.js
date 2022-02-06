@@ -1,10 +1,25 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+// import { Link, withRouter } from "react-router-dom";
+
 
 // style 
 import "../styles/src/MyPage.scss"
 
 
 function MyPage () {
+  // const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(true);
+
+  const onClickLogOut = () => {
+    // 로그아웃 되면, 무조건 메인 페이지로 다시 가게 할 것!
+    
+    // (loggedIn === false) {}
+
+
+  };  
+
+
   return (
     <>
       {/* <div>마이페이지....</div> */}
