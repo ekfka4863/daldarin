@@ -157,16 +157,16 @@ div {
           width: 318px;
           min-width: 318px;
           max-width: 318px;
-          height: 368px;
-          min-height: 368px;
-          max-height: 368px;
+          height: 450px;
+          min-height: 450px;
+          max-height: 450px;
           padding: 0;
           // background-color: #a97;
           .item_visual {
             width: 350px;
-            height: 250px;
-            min-height: 250px;
-            max-height: 250px;
+            height: 300px;
+            min-height: 300px;
+            max-height: 300px;
             position: relative;
             padding: 0;
             // background-color: #da9;
@@ -201,9 +201,9 @@ div {
             }// dl
             img {
               width: 90%;
-              height: 250px;
-              min-height: 250px;
-              max-height: 250px;
+              height: 300px;
+              min-height: 300px;
+              max-height: 300px;
               object-fit: cover;
             }
           }
@@ -259,7 +259,7 @@ div {
     }// #MainPageItem
     div.next_slide_indicator {
       position: absolute;
-      top: 65%;
+      top: 75%;
       right: -270px;
       transform: translate(0, -50%);
       z-index: 100;
