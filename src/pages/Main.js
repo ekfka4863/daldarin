@@ -1,13 +1,23 @@
 import { Link } from "react-router-dom";
 import "../styles/src/Main.scss";
 
-// images
+import Slider from 'react-touch-drag-slider';  // reference: https://www.npmjs.com/package/react-touch-drag-slider
+
+// component
+import MainPageItem from "../components/MainPageItem";
+
+// img
 import main_view_box_bg_img from "../assets/img/main/main_view_box_bg_img.png";
 import main_con02_coupon from "../assets/img/main/main_con02_coupon.png";
-import main_con03_product_01 from "../assets/img/main/main_con03_product_01.jpeg";
-import main_con03_product_02 from "../assets/img/main/main_con03_product_02.png";
+// import main_con03_product_01 from "../assets/img/main/main_con03_product_01.jpeg";
+// import main_con03_product_02 from "../assets/img/main/main_con03_product_02.png";
 import main_con04_icon01 from "../assets/img/main/main_con04_icon01.png";
 import main_con05_img from "../assets/img/main/main_con05_img.jpg";
+import next_slide_indicator_img from "../assets/img/main/next_slide_indicator_img.png";
+
+
+// mockdata / api
+import products from "../data/products.json";
 
 
 
@@ -118,54 +128,42 @@ function Main () {
             </p>
           </div>
           <div className="main_con_3_products">
-            <ul>
-              <li>
-                {/* <Link to="상세페이지..." > */}
-                <div className="product_view_box">
-                  <div className="tag_box">
-                    <div className="popular_tag">인기상품</div>
-                    <div className="sales_tag">27%</div>
-                  </div>
-                  <div className="img_box">
-                    <img src={main_con03_product_01} alt="인기상품 달다린 타이벡감귤 5kg" />
-                  </div>
-                </div>
-                <div className="product_detail_box">
-                  <dl>
-                    <dt>달다린 타이벡감귤 5KG</dt>
-                    <dd>상위 1% 타이벡감귤!!</dd>
-                  </dl>
-                  <div className="prices">
-                    <span className="current_price">24,900원</span>
-                    <span className="previous_price">33,900원</span>
-                  </div>
-                </div>
-                {/* </Link> */}
-              </li>
-              <li>
-                {/* <Link to="상세페이지..." > */}
-                <div className="product_view_box">
-                  <div className="tag_box">
-                    <div className="popular_tag">인기상품</div>
-                    <div className="sales_tag">25%</div>
-                  </div>
-                  <div className="img_box">
-                    <img src={main_con03_product_02} alt="인기상품 황금향 5kg" />
-                  </div>
-                </div>
-                <div className="product_detail_box">
-                  <dl>
-                    <dt>황금향 5KG</dt>
-                    <dd>한라봉+천혜향의 꿀같은 조합</dd>
-                  </dl>
-                  <div className="prices">
-                    <span className="current_price">49,000원</span>
-                    <span className="previous_price">65,000원</span>
-                  </div>
-                </div>
-                {/* </Link> */}
-              </li>
-            </ul>
+              <Slider
+                onSlideComplete={(i) => {
+                  console.log('finished dragging, current slide is', i)
+                }}
+                onSlideStart={(i) => {
+                  console.log('started dragging on slide', i)
+                }}
+                activeIndex={0}
+                threshHold={100}
+                transition={0.5}
+                scaleOnDrag={true}
+              >
+              {
+                products.map((data, index) => {
+                  return (
+                    <div>
+                      <MainPageItem 
+                        id={data.id}
+                        title={data.title}
+                        detail={data.detail}
+                        original_price={data.original_price}
+                        discount_rate={data.discount_rate}
+                        quantity={data.quantity}
+                        image_url={data.image_url}
+                        // discounted_price={data.discounted_price}
+                        discounted_price={data.original_price - (data.original_price / 100 * data.discount_rate)}
+                      />
+                      <div className="next_slide_indicator" style={(index !== 4) ? {display : "block"} : {display : "none"}}>
+                      {/* <div className="next_slide_indicator"> */}
+                        <img className="next_slide_indicator_img" src={next_slide_indicator_img} alt="다음 슬라이드 안내 이미지" style={(index !== 4) ? {display : "block"} : {display : "none"}} />
+                      </div>
+                    </div>
+                  )
+                })
+              }
+              </Slider>
           </div>
         </div>
         <div className="main_con_4">
@@ -214,9 +212,9 @@ function Main () {
           </div>
           <div className="main_con_5_order">
             <div> 
-                {/* <Link to=""> */}
+                <Link to="/shopping">
                   단체주문하기  
-                {/* </Link> */}
+                </Link>
             </div>
             <img src={main_con05_img} alt="달다린 귤 이미지" />
           </div>

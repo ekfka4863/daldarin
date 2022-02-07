@@ -58,7 +58,7 @@ function Benefit() {
                 </tr>
                 <tr className="table_row_3">
                   <th>혜택</th>
-                  <td>달다린 <b>웹컴 쿠폰</b> 세트</td>
+                  <td>달다린 <b>웰컴 쿠폰</b> 세트</td>
                   <td>매 결제마다 결제금액의 <b>1% 포인트 적립</b></td>
                   <td>매 결제마다 결제금액의 <b>2% 포인트 적립</b></td>
                   <td>매 결제마다 결제금액의 <b>3% 포인트 적립</b></td>

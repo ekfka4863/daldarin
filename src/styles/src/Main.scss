@@ -235,70 +235,28 @@
       }
     }
     .main_con_3_products {
-      ul {
-        display: flex;
-        padding-top: 70px;
-        // a {
-          li {
-            position: relative;
-            padding: 0 30px 50px 0;
-            .product_view_box {
-              .tag_box {
-                display: flex;
-                text-align: center;
-                font-weight: 500;
-                color: #fff;
-                line-height: 50px;
-  
-                .popular_tag {
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  width: 100px;
-                  height: 50px;
-                  background-color: #333;
-                }
-                .sales_tag {
-                  position: absolute;
-                  top: 0;
-                  left: 100px;
-                  width: 50px;
-                  height: 50px;
-                  background-color: #fea30b;
-                }
-              }
-              // .img_box {}
-            }// .product_view_box
-            .product_detail_box {
-              padding-top: 20px;
-              dl {
-                dt {
-                  font-size: 20px;
-                  font-weight: 600;
-                }
-                // dd {}
-              }
-              .prices {
-                padding-top: 15px;
-                .current_price {
-                  font-size: 18px;
-                  font-weight: 600;
-                  color: #f26615;
-                  margin-right: 15px;
-                }
-                .previous_price {
-                  text-decoration: line-through;
-                }
-              }
-            }// .product_detail_box
-          }// li
-  
-  
-          // li 하나 똑같은걸로 또 있음!! 
-        // }// a
+      display: flex;
+      justify-content: center;
 
-      }// ul
-    }
+      padding: 0 20px;
+      margin-top: 50px;
+      background-color: #eee;
+      div {
+        width: 728px;
+        min-height: 600px;
+        max-height: 600px;
+        padding: 0;
+        margin-top: 10px;
+        // background-color: #eee;
+        div.slide-outer {
+          min-height: 600px;
+          div.slide-inner {
+            min-height: 600px;
+            // div#MainPageItem {}// div#MainPageItem
+          }// div.slide-inner
+        }// div.slide-outer
+      }// div -> <Slider />
+    }// .main_con_3_products
   }// .main_con_3 
 
 
@@ -446,12 +404,13 @@
 @include mobile {
   #mainBox {
     .view_box {
+      padding: 80px 10px 50px;
       .view_box_title {
         h3 {
           width: 290px;
           font-size: 33px;
           letter-spacing: -1px;
-          line-height: 55px;
+          line-height: 50px;
         }
         h3::after {
           width: 100px;
@@ -462,30 +421,33 @@
         p {
           padding-top: 20px;
           font-weight: 400;
-          font-size: 16px;
+          font-size: 13px;
         }
       }
       .view_box_bg_con {
         .view_box_bg_img {
-          min-width: 300px;
+          min-width: 280px;
+          min-height: 230px;
         }
       }
     }// .view_box 
 
     .main_con_1 {
+      padding: 0 10px 0;
       background-size: contain;
       .main_con_1_title {
         h3 {
-          width: 290px;
+          width: 340px;
           font-size: 33px;
-          letter-spacing: -1px;
-          line-height: 55px;
+          letter-spacing: -2px;
+          line-height: 50px;
         }
         p {
           width: 310px;
           padding-top: 20px;
-          font-size: 16px;
+          font-size: 13px;
           font-weight: 400;
+          // letter-spacing: -1px;
           color: #666;
           // background-color: #eee;
         }
@@ -507,66 +469,63 @@
         }
       }
     }
-
-
+    
+    
     .main_con_3 {
+      padding: 0 5px;
       .main_con_3_title {
-        flex-direction: column;
+        width: 360px;
+        display: inline-block;
         h3 {
+          min-width: 360px;
+          max-width: 360px;
           font-size: 33px;
           letter-spacing: -1px;
           line-height: 55px;
+          // background-color: #da0;
         }
         p {
-          width: auto;
+          min-width: 360px;
           max-width: 360px;
           padding-top: 20px;
-          font-size: 16px;
+          font-size: 14px;
           font-weight: 400;
           color: #666;
+          // background-color: #d9a;
         }
       }
       .main_con_3_products {
-        ul {
-        // a {
-          li {
-            .product_view_box {
-              .tag_box {
-                .popular_tag {}
-                .sales_tag {}
-              }
-              .img_box {
-                img {}
-              }
-            }// .product_view_box
-            .product_detail_box {
-              dl {
-                dt {}
-                dd {}
-              }
-              .prices {
-                .current_price {}
-                .previous_price {}
-              }
-            }// .product_detail_box
-          }// li
-  
-          // li 하나 똑같은걸로 또 있음!! 
-        // }// a
-  
-        }// ul
+        div {
+          margin-top: 0;
+          padding-top: 10px;
+          width: 350px;
+          min-height: 400px;
+          max-height: 450px;
+          // background-color: #da0;
+          // margin: 0 10px;
+          div.slide-outer {
+            min-height: 400px;
+            div.slide-inner {
+              min-height: 400px;
+              // div#MainPageItem {}// div#MainPageItem
+            }// div.slide-inner
+          }// div.slide-outer
+        }// div -> <Slider />
       }// .main_con_3_products
     }// .main_con_3 
 
 
 
     .main_con_4 {
+      // .main_con_4_title {}// ..main_con_4_title
       .main_con_4_promise {
         flex-direction: row;
         div {
           width: auto;
+          min-width: 360px;
           max-width: 360px;
           padding: 60px 0 0;
+          // background-color: #da2;
           h4 {
             width: auto;
             max-width: 360px;
@@ -587,22 +546,27 @@
         }
         .promise_1 {
           margin-right: 0;
-          p {
-            // background-color: #fff;
-          }
+          // p {}
           .img_box {
-            width: 250px;
+            min-width: 360px;
+            max-width: 360px;
             height: 300px;
             padding: 20px 0 40px;
+            margin: auto;
             // background-color: #e21;
             img {
               width: 250px;
+              object-fit: cover;
             }
           }
         }
         .promise_2 {
+          min-width: 360px;
+          max-width: 360px;
           margin-top: 40px;
           .reviews {
+            min-width: 360px;
+            max-width: 360px;
             padding: 40px 0;
             // background-color: red;
             p {
@@ -613,7 +577,7 @@
               line-height: calc((45px - 18px) / 3);
               border-radius: 45px;
               font-weight: 600;
-              font-size: 18px;
+              font-size: 14px;
               color: #111;
               letter-spacing: -1px;
               background-color: #fff;
@@ -665,7 +629,9 @@
           color: #666;
         }
       }
-      // .main_con_5_order {}
+      .main_con_5_order {
+        padding: 0;
+      }
     }// .main_con_5
 
   }
@@ -676,14 +642,35 @@
 /* #mainBox - tablet */ 
 @include tablet {
   #mainBox {
+    // padding: 0 20px;
     // .view_box {}
     // .main_con_1 {}
     // .main_con_2 {}
     
     .main_con_3 {
+      padding: 0;
       .main_con_3_title {
+        padding: 0 40px;
         flex-direction: column;
       }
+      .main_con_3_products {
+        padding: 0 20px;
+        div {
+          width: 728px;
+          min-height: 600px;
+          max-height: 600px;
+          padding: 0;
+          margin-top: 10px;
+          // background-color: #da0;
+          div.slide-outer {
+            min-height: 600px;
+            div.slide-inner {
+              min-height: 600px;
+              // div#MainPageItem {}// div#MainPageItem
+            }// div.slide-inner
+          }// div.slide-outer
+        }// div -> <Slider />
+      }// .main_con_3_products
     }// .main_con_3 
 
 
