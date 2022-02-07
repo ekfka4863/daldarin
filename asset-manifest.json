@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/daldarin/static/css/main.dc15d3df.css",
+    "main.js": "/daldarin/static/js/main.9c2dab7b.js",
+    "static/media/main_view_box_bg_img.png": "/daldarin/static/media/main_view_box_bg_img.4f780ea5c663e515937c.png",
+    "static/media/main_con05_img.jpg": "/daldarin/static/media/main_con05_img.7b1afd7581f22d310d8c.jpg",
+    "static/media/story_con04_img02.jpg": "/daldarin/static/media/story_con04_img02.200d0fc463067dd79d4b.jpg",
+    "static/media/story_con04_img01.jpg": "/daldarin/static/media/story_con04_img01.f9e64055c2295fd801f7.jpg",
+    "static/media/story_con03_bg.png": "/daldarin/static/media/story_con03_bg.9074846f9ecbc6d87627.png",
+    "static/media/main_con01_bg.png": "/daldarin/static/media/main_con01_bg.d53afc419b8bf47ad831.png",
+    "static/media/story_con05_img01.jpg": "/daldarin/static/media/story_con05_img01.41ae736031ce80f4d286.jpg",
+    "static/media/footer_bg.jpg": "/daldarin/static/media/footer_bg.38e880a0607cabd19634.jpg",
+    "static/media/story_con06_img01.png": "/daldarin/static/media/story_con06_img01.cd8fe34a7f930cc1e387.png",
+    "static/media/story_con04_img03.jpg": "/daldarin/static/media/story_con04_img03.2e4b00521914197aaa71.jpg",
+    "static/media/story_con07_bg.jpg": "/daldarin/static/media/story_con07_bg.47ff3e9b41d8f1fe4606.jpg",
+    "static/media/main_con03_product_02.png": "/daldarin/static/media/main_con03_product_02.d5d88cef2c7f0dec2ae9.png",
+    "static/media/story_con02_size_img01.png": "/daldarin/static/media/story_con02_size_img01.7357c1b8a041d327bae7.png",
+    "static/media/main_con03_product_01.jpeg": "/daldarin/static/media/main_con03_product_01.fe6ee9b48d6e6444f466.jpeg",
+    "static/media/main_con02_coupon.png": "/daldarin/static/media/main_con02_coupon.cac10e2d17d63efa2aa0.png",
+    "static/media/story_con02_size_img02.png": "/daldarin/static/media/story_con02_size_img02.e834759b420e65d132e7.png",
+    "static/media/story_con06_bg.jpg": "/daldarin/static/media/story_con06_bg.85dfb006168f0ec4844b.jpg",
+    "static/media/story_con02_size_img03.png": "/daldarin/static/media/story_con02_size_img03.84c39034586273df7d51.png",
+    "static/media/story_con02_size_img04.png": "/daldarin/static/media/story_con02_size_img04.f95d2ff30428314dfc46.png",
+    "static/media/event_list_bg.jpeg": "/daldarin/static/media/event_list_bg.a795e6b9c5f3284f133e.jpeg",
+    "static/media/event_list_bg.jpg": "/daldarin/static/media/event_list_bg.a795e6b9c5f3284f133e.jpg",
+    "static/media/story_con02_size_img05.png": "/daldarin/static/media/story_con02_size_img05.5872207413f62ba35d83.png",
+    "static/media/main_con04_icon01.png": "/daldarin/static/media/main_con04_icon01.2c9b1a6921f993397531.png",
+    "static/media/coupon_img01.png": "/daldarin/static/media/coupon_img01.a0d1d68c9864e369d806.png",
+    "index.html": "/daldarin/index.html",
+    "main.dc15d3df.css.map": "/daldarin/static/css/main.dc15d3df.css.map",
+    "main.9c2dab7b.js.map": "/daldarin/static/js/main.9c2dab7b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dc15d3df.css",
+    "static/js/main.9c2dab7b.js"
+  ]
+}
