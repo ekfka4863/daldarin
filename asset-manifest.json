@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/daldarin/static/css/main.b099a429.css",
+    "main.css": "/daldarin/static/css/main.bc411d0a.css",
     "main.js": "/daldarin/static/js/main.5d50f358.js",
     "static/media/main_view_box_bg_img.png": "/daldarin/static/media/main_view_box_bg_img.4f780ea5c663e515937c.png",
     "static/media/main_con05_img.jpg": "/daldarin/static/media/main_con05_img.7b1afd7581f22d310d8c.jpg",
@@ -25,11 +25,11 @@
     "static/media/main_con04_icon01.png": "/daldarin/static/media/main_con04_icon01.2c9b1a6921f993397531.png",
     "static/media/coupon_img01.png": "/daldarin/static/media/coupon_img01.a0d1d68c9864e369d806.png",
     "index.html": "/daldarin/index.html",
-    "main.b099a429.css.map": "/daldarin/static/css/main.b099a429.css.map",
+    "main.bc411d0a.css.map": "/daldarin/static/css/main.bc411d0a.css.map",
     "main.5d50f358.js.map": "/daldarin/static/js/main.5d50f358.js.map"
   },
   "entrypoints": [
-    "static/css/main.b099a429.css",
+    "static/css/main.bc411d0a.css",
     "static/js/main.5d50f358.js"
   ]
 }
