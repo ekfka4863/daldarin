@@ -1,0 +1,327 @@
+@import "../common/mixin";
+
+/* #benefitBox - pc, desktop1, desktop2 */ 
+#benefitBox {
+  padding: 100px 40px;
+  .benefit_box_con {
+    h3 {
+      // padding-bottom: 10px ;
+      padding-bottom: 30px ;
+      font-size: 30px;
+      font-weight: 500;
+      color: #212121;
+    }
+    .benefit_box_table {
+      table {
+        border: none;
+        color: #212121;
+        text-align: center;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+        tbody {
+          border: none;
+          tr {
+            border: none;
+            display: table-row;
+            height: 140px;
+            border-bottom: 1px solid #dadce0;
+            th {
+              border: none;
+              width: auto;
+              min-width: 140px;
+              font-weight: 500;
+            }
+            td {
+              border: none;
+              width: calc(100% / 4);
+            }
+          }
+          .table_row_1 {
+            // th {}
+            td {
+              div {
+                display: flex;
+                flex-direction: column;
+                span:nth-child(1) {
+                  position: relative;
+                  font-size: 30px;
+                  font-weight: 800;
+                }
+                span:nth-child(2) {
+                  font-size: 14px;
+                }
+              }// div 
+              span:nth-child(1)::before {
+                position: absolute;
+                top: 5px;
+                right: 60px;
+                display: block;
+                content: "";
+                overflow: hidden;
+                width: 8px;
+                height: 8px;
+                border-radius: 100%;
+              }
+            }// td
+            td:nth-of-type(1) span:nth-child(1):before {
+              background-color: #05c200;
+            }
+            td:nth-of-type(2) span:nth-child(1):before {
+              background-color: #bebebe;
+            }
+            td:nth-of-type(3) span:nth-child(1):before {
+              background-color: #84695a;
+            }
+            td:nth-of-type(4) span:nth-child(1):before {
+              background-color: #fea30b;
+            }
+          }
+          .table_row_2 {
+            // th {}
+            td {
+              font-size: 15px;
+              font-weight: 400;
+            }
+          }
+          .table_row_3 {
+            // th {}
+            td {
+              font-size: 15px;
+              font-weight: 400;
+            }
+          }
+          .table_row_4 {
+            width: 100%;
+            background-color: #fffbf5; ;
+            th {
+              background-color: #fffbf5; ;
+            }
+            .daldarin_points {
+              display: table-cell;
+              // background-color: #316;
+              div {
+                display: inline-block;
+                width: calc(100% / 3);
+                max-width: 350px;
+                height: 200px;
+                // background-color: #2aa;
+                padding: 50px;
+                .daldarin_points_img_1, 
+                .daldarin_points_img_2, 
+                .daldarin_points_img_3 {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  float: left;
+                  height: 100px;
+                  // background-color: #f1f;
+                    img {
+                      display: block;
+                      width: auto;
+                      min-width: 60px;
+                      height: auto;
+                      min-height: 50px;
+                      max-height: 50px;
+                      object-fit: contain;
+                      // background-color: #1af;
+                    }// img 
+                }
+                div:last-child {
+                  float: right;
+                  width: auto;
+                  min-width: 80px;
+                  height: auto;
+                  padding: 0;
+                  margin-top: 10px;
+                  line-height: 40px;
+                  // background-color: #ff1;
+                  span.emphasized_points {
+                    font-size: 30px;
+                    font-weight: 800;
+                  }
+                }
+              }// div 
+            }// .daldarin_points∂
+          }
+        }
+      }// table
+    }// .benefit_box_table
+  }// .benefit_box_con
+}
+
+
+
+/* #benefitBox - mobile */ 
+@include mobile {
+  #benefitBox {
+    padding: 100px 10px;
+    .benefit_box_con {
+      h3 {
+        padding-bottom: 30px;
+      }
+      .benefit_box_table {
+        table {
+          // caption {}
+          tbody {
+            tr {
+              th {
+                width: auto;
+                min-width: 40px;
+                font-size: 14px;
+              }
+              td {
+                width: calc(100% / 5);
+                padding-right: 10px;
+              }
+            }
+            .table_row_1 {
+              // th {}
+              td {
+                div {
+                  span:nth-child(1) {
+                    font-size: 20px;
+                  }
+                  // span:nth-child(2) {}
+                  span:nth-child(1)::before {
+                    width: 6px;
+                    height: 6px;
+                    top: 0px;
+                    right: -2px;
+                  }
+                }
+              }
+            }
+            .table_row_2 {
+              // th {}
+              td {
+                font-size: 14px;
+              }
+            }
+            .table_row_3 {
+              // th {}
+              td {
+                font-size: 14px;
+              }
+            }
+            .table_row_4 {
+              // th {}
+              .daldarin_points {
+                div {
+                  height: auto;
+                  display: flex;
+                  justify-content: space-between;
+                  width: 100%;
+                  padding: 0 50px;
+                  // background-color: #eaa;
+                  .daldarin_points_img_1, 
+                  .daldarin_points_img_2, 
+                  .daldarin_points_img_3 { 
+                    width: auto;
+                    // background-color: #10a;
+                    padding: 0;
+                    img {
+                      width: 50px;
+                      // background-color: #1aa;
+                    }
+                  }
+                  div:last-child {
+                    display: block;
+                    width: auto;
+                    height: 100px;
+                    margin: 0;
+                    letter-spacing: -1px;
+                    font-size: 14px;
+                    // background-color: #91a;
+                    span.emphasized_points {
+                      font-size: 25px;
+                    }
+                  }
+                }
+              }// .daldarin_points
+            }
+          }
+        }// table
+      }// .benefit_box_table
+    }// .benefit_box_con
+  }
+}
+
+
+
+/* #benefitBox - tablet */ 
+@include tablet {
+  #benefitBox {
+    .benefit_box_con {
+      h3 {
+        padding-bottom: 30px;
+      }
+      .benefit_box_table {
+        table {
+          tbody {
+            // th {}
+            td {
+              padding: 0 10px;
+            }
+            .table_row_1 {
+              // th {}
+              td {
+                div {
+                  // span:nth-child(1) {}
+                  // span:nth-child(2) {}
+                  span:nth-child(1)::before {
+                    top: 5px;
+                    right: 0px;
+                  }
+                }
+              }
+            }
+            // .table_row_2 {
+            //   th {}
+            //   td {}
+            // }
+            // .table_row_3 {
+            //   th {}
+            //   td {}
+            // }
+            .table_row_4 {
+              // th {}
+              .daldarin_points {
+                // background-color: #31a;
+                div {
+                  width: 100%;
+                  height: auto;
+                  padding: 10px 50px;
+                  // background-color: #fda;
+                  div:nth-child(1) {
+                    width: auto;
+                    min-width: 50px;
+                    max-width: 60px;
+                    height: auto;
+                    min-height: 50px;
+                    max-height: 60px;
+                    margin-top: 15px;
+                    // background-color: #1a0;
+                    img {
+                      // background-color: #f18;
+                    }
+                  }
+                  div:nth-child(2) {
+                    // font-size: 15px;
+                    letter-spacing: -1px;
+                    margin-top: 0;
+                    span {
+                      line-height: 10px;
+                    }
+                    span.emphasized_points {
+                      font-size: 25px;
+                    }
+                  }
+                }// div 
+              }// .daldarin_points
+            }
+          }
+        }// table
+      }// .benefit_box_table
+    }// .benefit_box_con
+  }
+}
