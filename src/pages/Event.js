@@ -58,7 +58,7 @@ function Event() {
                         <span>{elem.coupon[1]}</span>
                       </div>
                       <div>
-                        <img src={elem.coupon[2]} alt={elem.coupon[idx]} />
+                        <img src={elem.coupon[2]} alt={elem.coupon[idx]}/>
                       </div>
                     </li>
                   )

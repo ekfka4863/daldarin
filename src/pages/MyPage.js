@@ -70,7 +70,7 @@ function MyPage () {
                     <div>{/* 회원 성별 api에서 받아온 걸로 바인딩하기 */}01012345678</div>
                     <form>
                       <div>
-                        <input type="number" placeholder="변경할 휴대폰 번호를 입력해주세요." />
+                        <input type="tel" placeholder="변경할 휴대폰 번호를 입력해주세요." />
                         <label><span className="blind">휴대폰 번호 입력란</span></label>
                       </div>
                       <div>

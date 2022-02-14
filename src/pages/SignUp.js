@@ -80,7 +80,7 @@ function SignUp() {
                   <div className="phone_num_check">
                     <dt>휴대폰 번호</dt>
                     <dd>
-                      <input type="number" placeholder="숫자만 입력해주세요." required />
+                      <input type="tel" placeholder="숫자만 입력해주세요." required />
                       <button>인증번호 전송</button>
                     </dd>
                   </div>
