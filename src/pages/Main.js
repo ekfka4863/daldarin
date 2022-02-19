@@ -1,5 +1,5 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "../styles/src/Main.scss";
 
 import Slider from 'react-touch-drag-slider';  // reference: https://www.npmjs.com/package/react-touch-drag-slider
 
@@ -9,19 +9,39 @@ import MainPageItem from "../components/MainPageItem";
 // img
 import main_view_box_bg_img from "../assets/img/main/main_view_box_bg_img.png";
 import main_con02_coupon from "../assets/img/main/main_con02_coupon.png";
-// import main_con03_product_01 from "../assets/img/main/main_con03_product_01.jpeg";
-// import main_con03_product_02 from "../assets/img/main/main_con03_product_02.png";
 import main_con04_icon01 from "../assets/img/main/main_con04_icon01.png";
 import main_con05_img from "../assets/img/main/main_con05_img.jpg";
 import next_slide_indicator_img from "../assets/img/main/next_slide_indicator_img.png";
 
+// API 
+import { GET_PRODUCTS_API } from "../config";
 
-// mockdata / api
-import products from "../data/products.json";
+// styling 
+import "../styles/src/Main.scss";
 
 
 
 function Main () {
+  const [products, setProducts] = useState([]);
+
+  // api get request -> GET_PRODUCTS_API
+  useEffect(() => {
+    const asyncGetProduct = async () => {
+      try {
+        const response = await fetch(GET_PRODUCTS_API);
+        const data = await response.json();
+        
+        setProducts([...data]);
+
+      } catch(error) {
+        console.log("error => ", error);
+      }
+    };
+    
+    asyncGetProduct();
+  }, []);
+
+
   return (
     <>
       <div id="mainBox">
@@ -145,15 +165,15 @@ function Main () {
                   return (
                     <div>
                       <MainPageItem 
-                        id={data.id}
-                        title={data.title}
-                        detail={data.detail}
-                        original_price={data.original_price}
-                        discount_rate={data.discount_rate}
-                        quantity={data.quantity}
-                        image_url={data.image_url}
-                        // discounted_price={data.discounted_price}
-                        discounted_price={data.original_price - (data.original_price / 100 * data.discount_rate)}
+                        id={products[index].id}
+                        title={products[index].name}
+                        detail={products[index].details}
+                        original_price={products[index].original_price}
+                        discount_rate={products[index].discount_rate}
+                        quantity={products[index].stock_quantity}
+                        image_url={products[index].image_url}
+                        // discounted_price={products[index].discounted_price}
+                        discounted_price={products[index].original_price - (products[index].original_price / 100 * products[index].discount_rate)}
                       />
                       <div className="next_slide_indicator" style={(index !== 4) ? {display : "block"} : {display : "none"}}>
                       {/* <div className="next_slide_indicator"> */}

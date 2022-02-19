@@ -1,5 +1,4 @@
-//  import { useEffect, useRef } from "react";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 // API 
@@ -11,9 +10,6 @@ import "../styles/src/ProductEach.scss";
 
 function ProductEach () {
   const [products, setProducts] = useState([]);
-  
-  let productsCopied = useRef([]);
-  // let productsCopied = [];
 
   const params = useParams();
   const productId = params.id;
