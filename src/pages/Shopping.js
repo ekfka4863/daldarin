@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-// import axios from "axios";
 
 // mockdata/API
 // import products from "../data/products.json";
@@ -20,7 +19,6 @@ function Shopping() {
   const [products, setProducts] = useState([]);
   
   // api get request -> GET_PRODUCTS_API
-  
   useEffect(() => {
     const asyncGetProduct = async () => {
       try {
@@ -68,18 +66,17 @@ function Shopping() {
               </ul>
             </div>
             <div className="product_list">
-              {/* 상품 Item.js로 map 써서 display하기! */}
               {
-
                 products.map((data) => {
                   return (
                     <Item 
+                      key={data.id}
                       id={data.id}
-                      title={data.name}
-                      detail={data.details}
+                      name={data.name}
+                      details={data.details}
                       original_price={data.original_price}
                       discount_rate={data.discount_rate}
-                      quantity={data.stock_quantity}
+                      stock_quantity={data.stock_quantity}
                       image_url={data.image_url}
                       // discounted_price={data.discounted_price}
                       discounted_price={data.original_price - (data.original_price / 100 * data.discount_rate)}

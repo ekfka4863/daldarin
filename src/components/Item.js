@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 // styling 
 import "../styles/src/Item.scss";
 
-// default product img 
+// default img
 import img_under_preparation from "../assets/img/shopping/img_under_preparation.png";
-
 
 function Item ({ id, name, details, original_price, discount_rate, stock_quantity, image_url, discounted_price }) {
 
@@ -18,7 +17,7 @@ function Item ({ id, name, details, original_price, discount_rate, stock_quantit
               <dl>
                 <dt>인기상품</dt>
                 {
-                    (discount_rate !== 0) 
+                    (discount_rate !== null) 
                   ? 
                     <dd className="discount_rate_tag">{discount_rate + "%"}</dd> 
                   :
@@ -26,8 +25,8 @@ function Item ({ id, name, details, original_price, discount_rate, stock_quantit
                 }
                 {/* <dd className="discount_rate_tag">{(discountRate !== 0) ? discountRate + "%" : null}</dd> */}
               </dl>
-              <img src={img_under_preparation} alt="달다린 제품 미리보기 이미지" />
-              {/* <img src={image_url} alt="달다린 제품 미리보기 이미지" /> */}
+              {/* <img src={img_under_preparation} alt="달다린 제품 미리보기 이미지" /> */}
+              <img src={(image_url !== "") ? image_url : img_under_preparation} alt="달다린 제품 미리보기 이미지" />
             </div>
             <div className="item_detail">
               <h3>{name}</h3>
