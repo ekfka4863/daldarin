@@ -3,8 +3,11 @@ import { Link } from "react-router-dom";
 // styling 
 import "../styles/src/Item.scss";
 
+// default product img 
+import img_under_preparation from "../assets/img/shopping/img_under_preparation.png";
 
-function Item ({ id ,title, detail, original_price, discount_rate, quantity, image_url, discounted_price }) {
+
+function Item ({ id, name, details, original_price, discount_rate, stock_quantity, image_url, discounted_price }) {
 
   return (
     <>
@@ -23,12 +26,13 @@ function Item ({ id ,title, detail, original_price, discount_rate, quantity, ima
                 }
                 {/* <dd className="discount_rate_tag">{(discountRate !== 0) ? discountRate + "%" : null}</dd> */}
               </dl>
-              <img src={image_url} alt="달다린 제품 미리보기 이미지" />
+              <img src={img_under_preparation} alt="달다린 제품 미리보기 이미지" />
+              {/* <img src={image_url} alt="달다린 제품 미리보기 이미지" /> */}
             </div>
             <div className="item_detail">
-              <h3>{title}</h3>
+              <h3>{name}</h3>
               <div className="item_detail_con">
-                <p>{detail}</p>
+                <p>{details}</p>
                 <ul>
                   {/* <li>{original_price - (original_price / 100 * discount_rate)}원</li> */}
                   <li>{discounted_price}<span>원</span></li>

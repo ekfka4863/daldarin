@@ -1,15 +1,47 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+// import axios from "axios";
 
 // mockdata/API
-import products from "../data/products.json";
+// import products from "../data/products.json";
 
 // component 
 import Item from "../components/Item";
 
+// API 
+// import axios from "axios";
+import { GET_PRODUCTS_API } from "../config";
+
+
 // styling 
-import "../styles/src/Shopping.scss";
+import "../styles/src/Shopping.scss"; 
 
 function Shopping() {
+  const [products, setProducts] = useState([]);
+  
+  // api get request -> GET_PRODUCTS_API
+  
+  useEffect(() => {
+    const asyncGetProduct = async () => {
+      try {
+        const response = await fetch(GET_PRODUCTS_API);
+        const data = await response.json();
+        
+        data.forEach((each) => {
+          setProducts(products => [...products, each]);
+        });
+        // console.log("products => ", products);
+      } catch(error) {
+        console.log("error => ", error);
+      }
+    };
+
+    asyncGetProduct();
+  }, []);
+
+  // console.log("products => ", products);  // products =>  (5) [{…}, {…}, {…}, {…}, {…}]
+
+
 
   return (
     <>
@@ -38,18 +70,16 @@ function Shopping() {
             <div className="product_list">
               {/* 상품 Item.js로 map 써서 display하기! */}
               {
-                // products.map((data) => console.log(data))
-                // products.map((data) => console.log(data.title))
-                
+
                 products.map((data) => {
                   return (
                     <Item 
                       id={data.id}
-                      title={data.title}
-                      detail={data.detail}
+                      title={data.name}
+                      detail={data.details}
                       original_price={data.original_price}
                       discount_rate={data.discount_rate}
-                      quantity={data.quantity}
+                      quantity={data.stock_quantity}
                       image_url={data.image_url}
                       // discounted_price={data.discounted_price}
                       discounted_price={data.original_price - (data.original_price / 100 * data.discount_rate)}
